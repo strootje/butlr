@@ -3,16 +3,10 @@
 	"name": "butlr",
 	"version": "0.1.0",
 
-	"main": "./lib/butlr.js",
+	"main": "./lib/index.js",
 	"bin": "./bin/butlr",
 
 	"scripts": {
-		"clean:lib": "rimraf ./lib",
-
-		"prebuild": "run-s clean:*",
-		"build": "babel ./src/ --out-dir ./lib",
-
-		"prepublishOnly": "run-s build"
 	},
 
 	"dependencies": {
@@ -21,13 +15,5 @@
 		"cliui": "3.2.*",
 		"progress": "2.0.*",
 		"simple-git": "1.73.*"
-	},
-
-	"devDependencies": {
-		"babel-cli": "*",
-		"babel-preset-latest": "*",
-		"babel-polyfill": "*",
-		"npm-run-all": "*",
-		"rimraf": "*"
 	}
 }

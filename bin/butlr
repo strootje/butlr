@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-"use strict";
-require("babel-polyfill");
+'use strict';
 
-var join = require('path').join;
-var script = join(__dirname, '..', 'lib', 'butlr.js');
-require(script).default();
+const { join } = require('path');
+require(join(__dirname, '..', 'lib'))().catch(
+	err => console.error(err)
+);
